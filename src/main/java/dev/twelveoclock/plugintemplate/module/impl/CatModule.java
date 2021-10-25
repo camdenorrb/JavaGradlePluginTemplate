@@ -40,23 +40,16 @@ public final class CatModule extends PluginModule {
 
     @EventHandler
     private void onSpawn(final EntitySpawnEvent event) {
-        
-        // Delay the task by 1 tick in order to wait for the name change
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
 
-            if (
-                !(event.getEntity() instanceof final Cat cat) ||
-                cat.getCustomName() == null ||
-                !cat.getCustomName().equals(config.catName())
-            ) {
-                return;
-            }
+        if (
+            !(event.getEntity() instanceof final Cat cat) ||
+            cat.getCustomName() == null ||
+            !cat.getCustomName().equals(config.catName())
+        ) {
+            return;
+        }
 
-            System.out.println("Called");
-
-            cat.launchProjectile(Firework.class, new Vector(0, 5, 0));
-        });
-
+        cat.launchProjectile(Firework.class, new Vector(0, 5, 0));
     }
 
 }
