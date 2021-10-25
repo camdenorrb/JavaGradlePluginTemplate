@@ -16,7 +16,7 @@ public final class PlayerModule extends PluginModule {
     @EventHandler
     private void onJoin(final PlayerJoinEvent event) {
         final Player player = event.getPlayer();
-        player.playSound(player.getLocation(), Sound.ENTITY_CAT_PURR, 1.0f, 1.0f);
+        player.playSound(player.getLocation(), Sound.ENTITY_CAT_PURR, 1.0F, 1.0F);
     }
 
 }

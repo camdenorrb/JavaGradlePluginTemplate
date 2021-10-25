@@ -24,7 +24,7 @@ final class TemplatePluginTest {
 
     @Test
     void join() {
-        PlayerMock player = server.addPlayer();
+        final PlayerMock player = server.addPlayer();
         player.assertSoundHeard(Sound.ENTITY_CAT_PURR);
     }
 
