@@ -39,7 +39,7 @@ public final class MeowCommand implements CommandExecutor {
             cat.setInvulnerable(true);
             cat.setCatType(Cat.Type.BLACK);
             cat.setCollarColor(DyeColor.RED);
-            cat.setCustomName(ChatUtils.colorize(catName));
+            cat.setCustomName(catName);
             cat.setCustomNameVisible(true);
         });
 

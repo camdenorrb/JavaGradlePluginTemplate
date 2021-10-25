@@ -1,4 +1,3 @@
-
 package dev.twelveoclock.plugintemplate;
 
 import com.moandjiezana.toml.Toml;
