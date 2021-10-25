@@ -12,7 +12,9 @@ repositories {
 }
 
 dependencies {
+
     compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
+
     implementation("com.moandjiezana.toml:toml4j:0.7.2")
     implementation("org.jetbrains:annotations:22.0.0")
 
