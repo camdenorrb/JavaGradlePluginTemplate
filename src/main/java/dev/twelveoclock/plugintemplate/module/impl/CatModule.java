@@ -40,10 +40,7 @@ public final class CatModule extends PluginModule {
 
     @EventHandler
     private void onSpawn(final EntitySpawnEvent event) {
-
-        System.out.println(event.getEntity().getType());
-        System.out.println(event.getEntity().getCustomName());
-
+        
         // Delay the task by 1 tick in order to wait for the name change
         plugin.getServer().getScheduler().runTask(plugin, () -> {
 
