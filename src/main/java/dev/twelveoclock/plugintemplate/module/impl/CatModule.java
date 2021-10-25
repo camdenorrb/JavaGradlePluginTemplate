@@ -41,6 +41,7 @@ public final class CatModule extends PluginModule {
     @EventHandler
     private void onSpawn(final EntitySpawnEvent event) {
 
+        // If isn't the expected cat, return
         if (
             !(event.getEntity() instanceof final Cat cat) ||
             cat.getCustomName() == null ||
