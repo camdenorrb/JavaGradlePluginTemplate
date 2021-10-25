@@ -8,6 +8,7 @@
 - [x] MockBukkit for testing
 - [x] Cat module :3
 - [x] Player module
+
 ### Commands
 ```
 /meow - Spawns a cat with the name specified in the config
