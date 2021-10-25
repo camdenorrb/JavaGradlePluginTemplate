@@ -1,5 +1,7 @@
 # Java Gradle Plugin Template
 
+[![Build Status](https://drone.12oclock.dev/api/badges/camdenorrb/JavaGradlePluginTemplate/status.svg)](https://drone.12oclock.dev/camdenorrb/JavaGradlePluginTemplate)
+
 ### Features
 - [x] Modules
 - [x] Basic utilities
