@@ -84,8 +84,8 @@ public final class TemplatePlugin extends JavaPlugin {
         }
 
         // Read config
-        try {
-            pluginConfig = PluginConfig.from(new Toml().read(Files.newInputStream(configPath)));
+        try (final InputStream inputStream = Files.newInputStream(configPath)) {
+            pluginConfig = PluginConfig.from(new Toml().read(inputStream));
         }
         catch (IOException e) {
             e.printStackTrace();
