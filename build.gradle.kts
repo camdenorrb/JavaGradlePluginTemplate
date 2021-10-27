@@ -19,8 +19,11 @@ dependencies {
 
     compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
 
-    implementation("com.moandjiezana.toml:toml4j:0.7.2")
     implementation("org.jetbrains:annotations:22.0.0")
+
+    // Jackson
+    implementation("com.fasterxml.jackson.core:jackson-core:2.13.0")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.13.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     testImplementation("com.github.seeseemelk:MockBukkit-v1.17:1.10.1")

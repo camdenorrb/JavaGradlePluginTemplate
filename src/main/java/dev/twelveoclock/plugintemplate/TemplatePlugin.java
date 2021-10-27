@@ -1,6 +1,6 @@
 package dev.twelveoclock.plugintemplate;
 
-import com.moandjiezana.toml.Toml;
+import com.fasterxml.jackson.dataformat.toml.TomlMapper;
 import dev.twelveoclock.plugintemplate.config.PluginConfig;
 import dev.twelveoclock.plugintemplate.module.impl.CatModule;
 import dev.twelveoclock.plugintemplate.module.impl.PlayerModule;
@@ -74,9 +74,9 @@ public final class TemplatePlugin extends JavaPlugin {
 
         // Create the default config if no file exists
         if (Files.notExists(configPath)) {
-            try (final InputStream configStream = getClass().getResource("/config.toml").openStream()) {
+            try (final InputStream inputStream = getClass().getResource("/config.toml").openStream()) {
                 Files.createDirectories(configPath.getParent());
-                Files.copy(configStream, configPath);
+                Files.copy(inputStream, configPath);
             }
             catch (IOException e) {
                 e.printStackTrace();
@@ -85,7 +85,7 @@ public final class TemplatePlugin extends JavaPlugin {
 
         // Read config
         try (final InputStream inputStream = Files.newInputStream(configPath)) {
-            pluginConfig = PluginConfig.from(new Toml().read(inputStream));
+            pluginConfig = new TomlMapper().readValue(inputStream, PluginConfig.class);
         }
         catch (IOException e) {
             e.printStackTrace();
