@@ -13,6 +13,7 @@ public final class PlayerModule extends PluginModule {
         super(plugin);
     }
 
+
     @EventHandler
     private void onJoin(final PlayerJoinEvent event) {
         final Player player = event.getPlayer();
