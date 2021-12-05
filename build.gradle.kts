@@ -25,8 +25,8 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-core:2.13.0")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.13.0")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
-    testImplementation("com.github.seeseemelk:MockBukkit-v1.17:1.10.3")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation("com.github.seeseemelk:MockBukkit-v1.17:1.10.4")
 }
 
 
