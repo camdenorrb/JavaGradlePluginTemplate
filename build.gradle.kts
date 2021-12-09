@@ -36,7 +36,11 @@ tasks {
         useJUnitPlatform()
     }
 
-    // TODO: Change the second parameter to your plugin's package.
+    // TODO: Change the second parameter to your plugin's package + the suffix.
+    //       For example, if your main package is "me.example.catplugin",
+    //       change the second parameter for the first relocate to:
+    //       "me.example.catplugin.libs.com.fasterxml".
+    //       Then, follow this pattern to the other relocate calls.
     shadowJar {
         relocate("com.fasterxml", "dev.twelveoclock.plugintemplate.libs.com.fasterxml")
         relocate("org.jetbrains", "dev.twelveoclock.plugintemplate.libs.org.jetbrains")
