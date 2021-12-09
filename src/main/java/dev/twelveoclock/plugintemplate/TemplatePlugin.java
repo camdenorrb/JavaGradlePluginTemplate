@@ -2,8 +2,8 @@ package dev.twelveoclock.plugintemplate;
 
 import com.fasterxml.jackson.dataformat.toml.TomlMapper;
 import dev.twelveoclock.plugintemplate.config.PluginConfig;
-import dev.twelveoclock.plugintemplate.module.impl.CatModule;
-import dev.twelveoclock.plugintemplate.module.impl.PlayerModule;
+import dev.twelveoclock.plugintemplate.module.CatModule;
+import dev.twelveoclock.plugintemplate.module.PlayerModule;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
@@ -78,8 +78,8 @@ public final class TemplatePlugin extends JavaPlugin {
                 Files.createDirectories(configPath.getParent());
                 Files.copy(inputStream, configPath);
             }
-            catch (IOException e) {
-                e.printStackTrace();
+            catch (final IOException ex) {
+                ex.printStackTrace();
             }
         }
 
@@ -87,8 +87,8 @@ public final class TemplatePlugin extends JavaPlugin {
         try (final InputStream inputStream = Files.newInputStream(configPath)) {
             pluginConfig = new TomlMapper().readValue(inputStream, PluginConfig.class);
         }
-        catch (IOException e) {
-            e.printStackTrace();
+        catch (final IOException ex) {
+            ex.printStackTrace();
         }
     }
 
