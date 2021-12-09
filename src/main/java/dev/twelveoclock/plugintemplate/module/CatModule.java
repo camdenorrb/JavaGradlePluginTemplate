@@ -1,8 +1,8 @@
-package dev.twelveoclock.plugintemplate.module.impl;
+package dev.twelveoclock.plugintemplate.module;
 
 import dev.twelveoclock.plugintemplate.commands.MeowCommand;
 import dev.twelveoclock.plugintemplate.config.PluginConfig;
-import dev.twelveoclock.plugintemplate.module.PluginModule;
+import dev.twelveoclock.plugintemplate.module.base.PluginModule;
 import org.bukkit.entity.Cat;
 import org.bukkit.entity.Firework;
 import org.bukkit.event.EventHandler;
