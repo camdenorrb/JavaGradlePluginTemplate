@@ -31,16 +31,16 @@ dependencies {
 
 
 tasks {
+
     test {
         useJUnitPlatform()
     }
-}
 
-// TODO: Change the second parameter to your plugin's package".
-tasks {
+    // TODO: Change the second parameter to your plugin's package.
     shadowJar {
         relocate("com.fasterxml", "dev.twelveoclock.plugintemplate.libs.com.fasterxml")
         relocate("org.jetbrains", "dev.twelveoclock.plugintemplate.libs.org.jetbrains")
         relocate("org.intellij", "dev.twelveoclock.plugintemplate.libs.org.intellij")
     }
 }
+
