@@ -29,7 +29,7 @@ dependencies {
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.15.2")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
-    testImplementation("com.github.seeseemelk:MockBukkit-v1.20:3.9.0")
+    testImplementation("com.github.seeseemelk:MockBukkit-v1.17:1.13.0")
 }
 
 
