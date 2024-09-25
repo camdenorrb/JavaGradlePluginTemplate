@@ -22,7 +22,7 @@ dependencies {
 
     compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
 
-    implementation("org.jetbrains:annotations:24.1.0")
+    implementation("org.jetbrains:annotations:25.0.0")
 
     // Jackson
     implementation("com.fasterxml.jackson.core:jackson-core:2.17.2")
